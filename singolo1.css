@@ -1,0 +1,99 @@
+body {
+    margin: 0 auto;
+    max-width: 1020px;
+}
+
+header {
+   
+    margin: auto;
+    height: 89px;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+}
+
+.wrapper {
+   
+    padding: 28px 40px ;
+  
+}
+
+
+.logo__name {
+   
+    font-family: "Lato-Bold", Verdana, sans-serif;
+    font-size: 25px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo__star {
+color: #f06c64;
+}
+
+.header__navigation {
+    float: right;
+    
+}
+
+.header__navigation a {
+text-decoration: none;
+font-size: 12px;
+line-height: 6px;
+color: #ffffff;
+font-family: "Lato";
+font-weight: 700;
+padding: 18px;
+}
+
+.header__navigation a:first-child {
+    color: #f06c64;
+}
+
+.slider {
+    background-color: #f06c64;
+}
+
+.
+
+h1 {
+font-size: 30px;
+line-height: 18px;
+color: #666d89;
+font-family: "Lato";
+}
+
+.services__general-description {
+height: 57px;
+font-size: 18px;
+line-height: 30px;
+color: #767e9e;
+font-family: "Lato";
+}
+
+.service {
+
+}
+
+.service__name {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+}
+
+.service__description {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url(assets/Lato-Black.ttf);
+    src: url(assets/Lato-Bold.ttf);
+    src: url(assets/Lato-Light.ttf);
+    src: url(assets/Lato-Regular.ttf);      
+}
