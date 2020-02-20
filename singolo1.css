@@ -29,7 +29,7 @@ body {
     font-size: 25px;
     color: #ffffff;
     letter-spacing: -0.4px;
-    display: flex;    
+    display: flex;  
 }
 
 .logo__star {
@@ -37,9 +37,10 @@ color: #f06c64;
 }
 
 .navigation {
+    padding-top: 5px;
     display: flex;
     flex-direction: row;
-    list-style-type: none;   
+    list-style-type: none;
 }
 
 .navigation__item::after {
@@ -52,23 +53,22 @@ color: #f06c64;
     display: none;
 }
 
+.navigation__name:hover {
+    color: teal;
+}
+
+.navigation__name:active {
+    color: #f06c64;
+}
+
 .navigation__name {
     text-decoration: none;
     font-size: 12px;
     color: #ffffff;
     font-family: Lato-Bold,  Verdana, sans-serif;
-   
-}
-
-.navigation__name_colored {
-    color: #f06c64;
-    text-decoration: none;
-    font-size: 12px;
-    font-family: Lato-Bold,  Verdana, sans-serif;
 }
 
 /***************SECTION SLIDER*******************/
-
 .slider {
     background-color: #f06c64;
     height: 594px;
@@ -80,98 +80,83 @@ color: #f06c64;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;   
-    height: 594px;
+    height: 600px;  
+}
+
+.slider__phone-vertical {
+    padding-right: 12px;
+}
+
+.slider__arrow:hover {
+    transform: scale(1.5, 1.5);
 }
 
 /***************SECTION SERVICES*******************/
-
 .services {
     height: 500px;
     background-color: #f2f2f2;
-    border-bottom: 6px solid #ffffff;
-    
+    border-bottom: 6px solid #ffffff; 
 }
 
- h2 {
-     
-margin: 0;
-padding: 68px 0 13px 0;
+.services__content {
+    margin: 0 auto;
+    max-width: 960px;
+}
 
-font-size: 30px;
-line-height: 18px;
-color: #666d89;
-font-family: Lato-Black;
+.services__title {
+    margin: 0;
+    padding: 68px 10px 6px 10px;
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: Lato-Black, Verdana, sans-serif;;
 }
 
 .services__general-description {
-
-font-size: 18px;
-line-height: 30px;
-color: #767e9e;
-font-family: Lato-Light;
-padding-bottom: 28px;
-
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: Lato-Light, Verdana, sans-serif;
+    text-align: justify;
+    margin: 25px 10px;
 }
 
 .layout-3-column {
-   
-    
-   
-}
-
-.layout-3-column__row {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 12px;
-   
-   
-   
-   
+    flex-wrap: wrap; 
 }
 
 .service {
-   
     display: flex;
-   justify-content: space-between;
-   
-    width: calc(100% / 3);
-   
-  
-   
-   
+    width: 300px; 
+    margin: 10px;   
 }
 
 .service__icon {
-   
- 
+  transform: translateY(10%); 
 }
 
-.service__text {
-  
-   
-    padding: 0 15px;
-  
- 
+.service__text { 
+   padding-left: 20px;
 }
 
 .service__name {
+    letter-spacing: -0.3px ;
     font-size: 18px;
     line-height: 18px;
     color: #666d89;
-    font-family: Lato-Black;
-    margin: 0;
-   
+    font-family: Lato-Black, Verdana, sans-serif;;
+    margin: 10px 0;
 }
 
 .service__description {
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
-    font-family: Lato-Regular;
-  
+    font-family: Lato-Regular, Verdana, sans-serif;;
     text-align: justify;
-   
+    margin: 0;
 }
 
 
