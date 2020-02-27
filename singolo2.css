@@ -117,6 +117,8 @@ body {
     font-family: Lato-Black, Verdana, sans-serif;
     margin: 14px 0 9px 0;
     letter-spacing: -0.3px;
+    text-overflow: ellipsis;  
+    overflow: hidden;    
 }
 
 .employee__description {
