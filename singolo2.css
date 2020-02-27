@@ -22,8 +22,8 @@ body {
     line-height: 18px;
     color: #666d89;
     margin: 0;
-    padding: 70px 0 27px 3px;
-    letter-spacing: -0.2px;
+    padding: 70px 0 27px 0;
+    letter-spacing: -0.3px;
 }
 
 .portfolio__description {
@@ -32,13 +32,13 @@ body {
     line-height: 30px;
     color: #767e9e;
     margin: 0;
-    padding-left: 4px;
+    
 }
 
 .tags {
     display: flex;
     flex-direction: row;
-    padding: 10px 0 20px 4px;
+    padding: 10px 0 20px 0px;
 }
 
 .tag {
@@ -63,12 +63,95 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;  
+    max-height: 600px;
+    overflow: hidden;
 }
 
-.image-container {
+.portfolio__image {
    display: flex;
-   width: 23%; 
-   padding: 0 0 20px 3px;  
+   justify-content: space-between; 
+   padding-bottom: 20px;  
+}
+
+/***************ABOUT-US*******************/
+
+.about-us {
+    height: 728px;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+}
+
+.about-us__title {
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: Lato-Black, Verdana, sans-serif;
+    margin: 0;
+    padding: 68px 0 14px 0px;
+}
+
+.about-us__description {
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: Lato-Light, Verdana, sans-serif;
+    margin: 15px 0 47px 0px;
+    text-align: justify;
+}
+
+.layout-3-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.employee {
+   width: 300px;
+}
+
+.employee__name {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: Lato-Black, Verdana, sans-serif;
+    margin: 14px 0 9px 0;
+    letter-spacing: -0.3px;
+}
+
+.employee__description {
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: Lato-Regular, Verdana, sans-serif;
+    margin: 0;
+    text-align: justify; 
+    letter-spacing: -0.1px;
+}
+
+.employee__contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 22px;
+    width: 152px;
+}
+
+.icon {
+    width: 15px;
+    height: 15px;
+}
+
+.icon-container {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #6a718c;
+    border-radius: 50%;
+    padding: 8px;
+}
+
+.icon-container:hover {
+    background-color: crimson;
 }
 
 @font-face {
