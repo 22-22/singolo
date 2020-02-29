@@ -32,13 +32,12 @@ body {
     line-height: 30px;
     color: #767e9e;
     margin: 0;
-    
 }
 
 .tags {
     display: flex;
     flex-direction: row;
-    padding: 10px 0 20px 0px;
+    padding: 10px 0 20px 0;
 }
 
 .tag {
@@ -57,20 +56,32 @@ body {
     border: 1px solid #a7a8ab;
 }
 
+.tag:hover {
+    cursor: pointer;
+    background-color: teal;
+}
+
+.tag:active {
+    cursor: pointer;
+    background-color: #f06c64;
+}
+
 .layout-4-columns {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;  
-    max-height: 600px;
-    overflow: hidden;
 }
 
 .portfolio__image {
    display: flex;
    justify-content: space-between; 
    padding-bottom: 20px;  
+}
+
+.portfolio__image:nth-child(n+13) {
+    display: none;
 }
 
 /***************ABOUT-US*******************/
@@ -87,7 +98,7 @@ body {
     color: #666d89;
     font-family: Lato-Black, Verdana, sans-serif;
     margin: 0;
-    padding: 68px 0 14px 0px;
+    padding: 68px 0 14px 0;
 }
 
 .about-us__description {
@@ -96,7 +107,7 @@ body {
     line-height: 30px;
     color: #767e9e;
     font-family: Lato-Light, Verdana, sans-serif;
-    margin: 15px 0 47px 0px;
+    margin: 15px 0 47px 0;
     text-align: justify;
 }
 
@@ -153,7 +164,13 @@ body {
 }
 
 .icon-container:hover {
-    background-color: crimson;
+    cursor: pointer;
+    background-color: teal;
+}
+
+.icon-container:active {
+    cursor: pointer;
+    background-color: #f06c64;
 }
 
 @font-face {
@@ -162,11 +179,11 @@ body {
 }
 
 @font-face {
-font-family: Lato-Light;
-src: url(assets/Lato-Light.ttf);
+    font-family: Lato-Light;
+    src: url(assets/Lato-Light.ttf);
 }
 
 @font-face {
-font-family: Lato-Regular;
-src: url(assets/Lato-Regular.ttf);    
+    font-family: Lato-Regular;
+    src: url(assets/Lato-Regular.ttf);    
 }
