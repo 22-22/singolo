@@ -9,31 +9,42 @@
 </head>
 
 <body>
-    <header class="header">
+    <header id="header">
         <div class="container header__content">
             <h1 class="logo">SINGOLO<span class="logo__star">*</span></h1>
             <nav>
                 <ul class="navigation">
-                    <li class="navigation__item"><a href="#" class="navigation__name navigation__name_colored">HOME</a>
-                    </li>
-                    <li class="navigation__item"><a href="#" class="navigation__name">SERVICES</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__name">PORTFOLIO</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__name">ABOUT</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__name">CONTACT</a></li>
+                    <li class="navigation__item"><a href="#header" class="navigation__name">HOME</a></li>
+                    <li class="navigation__item"><a href="#services" class="navigation__name">SERVICES</a></li>
+                    <li class="navigation__item"><a href="#portfolio" class="navigation__name">PORTFOLIO</a></li>
+                    <li class="navigation__item"><a href="#about-us" class="navigation__name">ABOUT</a></li>
+                    <li class="navigation__item"><a href="#feedback" class="navigation__name">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <section class="slider">
-        <div class="container slider__content">
-            <div class="slider__arrow"><a href="#"><img src="./assets/arrow-left.png" alt="arrow-left"></a></div>
-            <div class="slider__phone-vertical"><img src="./assets/iPhone Vertical.png" alt="phone-vertical"></div>
-            <div class="slider__phone-horizontal"><img src="./assets/iPhone Horizontal.png" alt="phone-horizontal">
+        <div class="container slider-container">
+            <div class="slider__arrow"><a href="#"><img class="arrow" src="./assets/arrow-left.png"
+                        alt="arrow-left"></a></div>
+            <div class="slides-container">
+                <div class=" slide-1 ">
+                    <div class="slider__phone-vertical"><img id="phone-vertical-image"
+                            src="./assets/iPhone Vertical.png" alt="phone-vertical"><img id="sv"
+                            class="screen-vertical hidden" src="./assets/screen-vertical.png" alt="vertical"></div>
+                    <div class="slider__phone-horizontal"><img id="phone-horizontal-image"
+                            src="./assets/iPhone Horizontal.png" alt="phone-horizontal">
+                        <img id="sh" class="screen-horizontal hidden" src="./assets/screen-horizontal.png"
+                            alt="horizontal">
+                    </div>
+                </div>
+                <div><img src="./assets/Slide-2.jpg" alt="Slide-2" class="slide-2 hidden "></div>
             </div>
-            <div class="slider__arrow"><a href="#"><img src="./assets/arrow-right.png" alt="arrow-right"></a></div>
+            <div class="slider__arrow"><a href="#"><img class="arrow" src="./assets/arrow-right.png"
+                        alt="arrow-right"></a></div>
         </div>
     </section>
-    <section class="services">
+    <section id="services">
         <div class="services__content">
             <h2 class="services__title">Our Services</h2>
             <p class="services__general-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -109,13 +120,13 @@
             </div>
         </div>
     </section>
-    <section class="portfolio">
+    <section id="portfolio">
         <div class="container">
             <h1 class="portfolio__title">Portfolio</h1>
             <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget
                 lacinia odio sem nec elit.</p>
             <div class="tags">
-                <span class="tag tag_selected">All</span>
+                <span class="tag">All</span>
                 <span class="tag">Web Design</span>
                 <span class="tag">Graphic Design</span>
                 <span class="tag">Artwork</span>
@@ -143,7 +154,7 @@
             </div>
         </div>
     </section>
-    <section class="about-us">
+    <section id="about-us">
         <div class="container">
             <h2 class="about-us__title">About Us</h2>
             <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
@@ -203,20 +214,24 @@
             </div>
         </div>
     </section>
-    <section class="feedback">
+    <section id="feedback">
         <div class="container">
             <h1 class="feedback__title">Get a Quote</h1>
             <p class="feedback__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus,
                 tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
             <div class="feedback__layout-2-columns">
-                <form class="form" action="#" method="GET">
+                <form class="form" action="" method="GET">
                     <input type="text" class="form__input" placeholder="Name (Required)" required>
                     <input type="email" class="form__input" placeholder="Email (Required)" required>
-                    <input type="text" class="form__input" placeholder="Subject">
+                    <input type="text" class="form__input subject" placeholder="Subject">
                     <textarea class="form__input textarea" placeholder="Describe your project in detail..."></textarea>
                     <button class="form__submit">Submit</button>
                 </form>
+                <div class="modal hidden">
+                    <div class="modal__content"></div>
+                    <button class="modal__close-button">ок</button>
+                </div>
                 <div class="contact-info">
                     <h3 class="contact-info__title">Contact Information</h3>
                     <p class="contact-info__text contact-info__description">Quisque hendrerit purus dapibus, ornare nibh
@@ -259,6 +274,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
