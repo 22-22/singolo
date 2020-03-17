@@ -15,7 +15,7 @@ MENU.addEventListener('click', (event) => {
 	}
 });
 
-PHONEVERT.addEventListener('click', (event) => {
+PHONEVERT.addEventListener('click', () => {
 	if (PHONEVERT.querySelector('#sv').classList.contains('hidden')) {
 		PHONEVERT.querySelector('#sv').classList.remove('hidden');
 	} else {
@@ -23,7 +23,7 @@ PHONEVERT.addEventListener('click', (event) => {
 	}
 });
 
-PHONEHOR.addEventListener('click', (event) => {
+PHONEHOR.addEventListener('click', () => {
 	if (PHONEHOR.querySelector('#sh').classList.contains('hidden')) {
 		PHONEHOR.querySelector('#sh').classList.remove('hidden');
 	} else {
@@ -32,14 +32,18 @@ PHONEHOR.addEventListener('click', (event) => {
 });
 
 PORTFOLIO.addEventListener('click', (event) => {
-	PORTFOLIO.querySelectorAll('.portfolio__image > img').forEach(item => item.classList.remove('portfolio-border'));
-	event.target.classList.add('portfolio-border');
+	if (event.target.tagName !== 'DIV') {
+		PORTFOLIO.querySelectorAll('.portfolio__image > img').forEach(item => item.classList.remove('portfolio-border'));
+		event.target.classList.add('portfolio-border');
+	}
 });
 
 TAGS.addEventListener('click', (event) => {
-	TAGS.querySelectorAll('.tag').forEach(item => item.classList.remove('active'));
-	event.target.classList.add('active');
-	random();
+	if (event.target.tagName == 'SPAN') {
+		TAGS.querySelectorAll('.tag').forEach(item => item.classList.remove('active'));
+		event.target.classList.add('active');
+		random();
+	}
 });
 
 function random() {
