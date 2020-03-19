@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header id="header">
+    <section id="header">
         <div class="container header__content">
             <h1 class="logo">SINGOLO<span class="logo__star">*</span></h1>
             <nav>
@@ -22,28 +22,31 @@
                 </ul>
             </nav>
         </div>
-    </header>
-    <section class="slider">
-        <div class="container slider-container">
-            <div class="slider__arrow"><a href="#"><img class="arrow" src="./assets/arrow-left.png"
-                        alt="arrow-left"></a></div>
-            <div class="slides-container">
-                <div class=" slide-1 ">
-                    <div class="slider__phone-vertical"><img id="phone-vertical-image"
-                            src="./assets/iPhone Vertical.png" alt="phone-vertical"><img id="sv"
-                            class="screen-vertical hidden" src="./assets/screen-vertical.png" alt="vertical"></div>
-                    <div class="slider__phone-horizontal"><img id="phone-horizontal-image"
-                            src="./assets/iPhone Horizontal.png" alt="phone-horizontal">
-                        <img id="sh" class="screen-horizontal hidden" src="./assets/screen-horizontal.png"
-                            alt="horizontal">
+    </section>
+    <div class="slider">
+        <div class="carousel">
+
+            <div class="items-container">
+                <div class="item red active-slide">
+                    <div class="slide-1">
+                        <div class="slider__phone-vertical"><img id="phone-vertical-image"
+                                src="./assets/iPhone Vertical.png" alt="phone-vertical"><img id="sv"
+                                class="screen-vertical hidden" src="./assets/screen-vertical.png" alt="vertical"></div>
+                        <div class="slider__phone-horizontal"><img id="phone-horizontal-image"
+                                src="./assets/iPhone Horizontal.png" alt="phone-horizontal">
+                            <img id="sh" class="screen-horizontal hidden" src="./assets/screen-horizontal.png"
+                                alt="horizontal">
+                        </div>
                     </div>
                 </div>
-                <div><img src="./assets/Slide-2.jpg" alt="Slide-2" class="slide-2 hidden "></div>
+                <div class="item blue slide-2" ><img src="./assets/Slide-2.jpg" alt="Slide-2" ></div>
             </div>
-            <div class="slider__arrow"><a href="#"><img class="arrow" src="./assets/arrow-right.png"
+            <div class=" control left"><a href="#"><img class="arrow left" src="./assets/arrow-left.png"
+                        alt="arrow-left"></a></div>
+            <div class=" control right"><a href="#"><img class="arrow right" src="./assets/arrow-right.png"
                         alt="arrow-right"></a></div>
         </div>
-    </section>
+    </div>
     <section id="services">
         <div class="container">
             <h2 class="services__title">Our Services</h2>
