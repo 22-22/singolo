@@ -10,8 +10,8 @@ const MODAL = document.querySelector('.modal')
 //change active menu element
 MENU.addEventListener('click', (event) => {
 	if (event.target.classList.contains('navigation__name')) {
-		MENU.querySelectorAll('.navigation__name').forEach(item => item.classList.remove('active'));
-		event.target.classList.add('active');
+		MENU.querySelectorAll('.navigation__name').forEach(item => item.classList.remove('active-nav'));
+		event.target.classList.add('active-nav');
 	}
 });
 
@@ -26,9 +26,9 @@ function onScroll(event) {
 	sections.forEach((el) => {
 		if (el.offsetTop <= curPosition && (el.offsetTop + el.offsetHeight) > curPosition) {
 			links.forEach((a) => {
-				a.classList.remove('active');
+				a.classList.remove('active-nav');
 				if (el.getAttribute('id') === a.getAttribute('href').substring(1)) {
-					a.classList.add('active');
+					a.classList.add('active-nav');
 				}
 			})
 		}
@@ -63,8 +63,8 @@ PORTFOLIO.addEventListener('click', (event) => {
 //change active tag
 TAGS.addEventListener('click', (event) => {
 	if (event.target.tagName == 'SPAN') {
-		TAGS.querySelectorAll('.tag').forEach(item => item.classList.remove('active'));
-		event.target.classList.add('active');
+		TAGS.querySelectorAll('.tag').forEach(item => item.classList.remove('active-tag'));
+		event.target.classList.add('active-tag');
 		random();
 	}
 });

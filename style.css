@@ -12,12 +12,6 @@ body {
     max-width: 940px;  
 }
 
-.active {
-    background-color: coral;
-    border-radius: 2px;
-    cursor: pointer;
-  }
-
 .hidden {
     display: none;
  }
@@ -83,6 +77,10 @@ body {
     font-size: 12px;
     color: #ffffff;
     font-family: Lato-Bold, Verdana, sans-serif;
+}
+
+.active-nav {
+    color: #f06c64;
 }
 
 /***************SECTION SLIDER*******************/
@@ -330,6 +328,11 @@ body {
     border-radius: 5px;
     padding: 0 6px;
     margin-right: 10px; 
+}
+
+.active-tag {
+    color: #c5c5c5;
+    border: 1px solid #a7a8ab;
 }
 
 .tag:hover {
