@@ -110,17 +110,19 @@ body {
   .item {
     display: none;
     position: relative;
-    animation: 1s ease-out;
+    animation: 0.8s ease-in-out;
   }
 
   .slide-1 {
     height: 594px;
     display: flex;
+    justify-content: center;
     align-items: center;
   }
 
   .slide-2 {
-      width: 940px;
+    transform: translateX(-10%);
+    width: 100%; 
   }
   
   .slider__phone-vertical {  

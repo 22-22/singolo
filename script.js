@@ -119,9 +119,9 @@ function previousItem(n) {
 
 function changeBack() {
 	if (items[currentItem].classList.contains('blue')) {	
-		document.querySelector('.slider').setAttribute("style", "background: #648BF0; border-bottom: 6px solid #ffffff;");
+		document.querySelector('.slider').setAttribute("style", "background: #648BF0; border-bottom: 6px solid #ffffff; transition: 1.5s;");
 	} else {
-		document.querySelector('.slider').setAttribute("style", "background: #f06c64; border-bottom: 6px solid #ea676b;");
+		document.querySelector('.slider').setAttribute("style", "background: #f06c64; border-bottom: 6px solid #ea676b; transition: 1.5s;");
 	};
 }
 
