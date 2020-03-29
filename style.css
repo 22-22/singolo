@@ -66,10 +66,6 @@ body {
     display: none;
 }
 
-.navigation__name:hover {
-    color: teal;
-}
-
 .navigation__name {
     text-decoration: none;
     font-size: 12px;
@@ -93,23 +89,12 @@ body {
 .slider {
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
+    overflow: hidden;
   }
 
   .carousel {
     position: relative;
-  /*  left: 50%;
-    transform: translateX(-50%);*/
   }
-    
-/*.items-container {
-   
-    position: relative;
-    height: inherit; 
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  } */
 
   .item {
     display: none;
@@ -118,11 +103,10 @@ body {
   }
 
   .slide-1 {
-    padding: 45px 115px 54px 115px;
+    padding: 48px 115px 57px 115px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
   }
 
   .slide-2 > img {
@@ -174,7 +158,6 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 5%;
     cursor: pointer;
     height: 100%;
   }
@@ -190,11 +173,13 @@ body {
   }
 
 .control.left {
+    width: 8%;
     left: 0;
     right: auto;
   }
   
   .control.right {
+    width: 6%;
     right: 0;
     left: auto;
   }
@@ -258,7 +243,6 @@ body {
     line-height: 30px;
     color: #767e9e;
     font-family: Lato-Light, Verdana, sans-serif;
-    
     margin: 0 0 35px;
 }
 
@@ -271,7 +255,7 @@ body {
 
 .service {
     display: flex;
-    width: 30%; 
+    width: 32%; 
     margin: 0 0 20px;   
 }
 
@@ -354,7 +338,6 @@ body {
 
 .tag:hover {
     cursor: pointer;
-    background-color: teal;
 }
 
 .portfolio__layout-4-columns {
@@ -478,7 +461,6 @@ body {
 
 .icon-container:hover {
     cursor: pointer;
-    background-color: teal;
 }
 
 .icon-container:active {
@@ -552,7 +534,6 @@ body {
 
 .form__submit:hover {
     cursor: pointer;
-    background-color: teal;
 }
 
 .form__input::placeholder {
@@ -577,7 +558,6 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 .modal__content {
@@ -603,7 +583,6 @@ body {
 
 .modal__close-button:hover {
     cursor: pointer;
-    background-color: firebrick;
 }
 
 /*******************CONTACT**********************/
@@ -706,7 +685,6 @@ font-family: Lato-Regular;
 src: url(assets/Lato-Regular.ttf);    
 }
 
-
 @media (max-width: 1019px)  {
 
     .slide-1 {
@@ -727,11 +705,9 @@ src: url(assets/Lato-Regular.ttf);
         margin-right: calc(10% / 2);
     }
   
-    /********************/
     .portfolio__image {
       flex: 1 0 25%;
     }
-    /********************/
 
     #about-us {
         padding: 52px 0 75px;
@@ -764,12 +740,11 @@ src: url(assets/Lato-Regular.ttf);
         overflow: hidden;
     }
 
-    .slider,
-    .services,
-    .portfolio,
-    .about,
-    .contact { 
-      scroll-margin-top: 70px;
+    #services,
+    #portfolio,
+    #about-us,
+    #feedback { 
+      scroll-margin-top: 71px;
     }
 
     .container {
@@ -854,7 +829,6 @@ src: url(assets/Lato-Regular.ttf);
 
     .logo {
         margin: auto;
-        transition: all 1s ease;
     }
 
     .logo-burger {
@@ -866,26 +840,28 @@ src: url(assets/Lato-Regular.ttf);
     .navigation-overlay {
         position: fixed;
         top: 0;
-        left: 0;
-        display: none;
+        left: -100%;
         width: 100%;
         height: 100vh;
         background-color: #2d303a;
         opacity: 0.6;
-        transition: all 1s ease ;
     }
 
     .navigation-overlay-open {
-        display: block;
-        transition: all 1s ease;
+        left: 0;
+        transition: all 0.7s ease;
     }
 
     .slide-1 {
         padding: 15px 40px;
     }
 
-    .control {
-        width: 6.5%;
+    .control.left {
+        width: 6%;
+      }
+
+      .control.right {
+          width: 7%;
       }
 
     .service {
@@ -899,7 +875,7 @@ src: url(assets/Lato-Regular.ttf);
 
     .portfolio__image {
       flex: 1 0 35%;
-      margin: 5px;
+      margin: 7px;
     } 
     
     .portfolio__image:nth-child(n+9) {
@@ -907,13 +883,21 @@ src: url(assets/Lato-Regular.ttf);
     }
 
     #about-us {
-        padding: 45px 0 35px;
+        padding: 45px 0 5px;
     }
 
     .employee {
         flex-basis: 100%;
         margin-right: 0;
         margin-bottom: 34px;
+    }
+
+    .employee__contacts {
+        margin-top: 13px;
+    }
+
+    #feedback {
+        padding: 47px 0 42px;
     }
 
     .feedback__layout-2-columns {
@@ -924,6 +908,7 @@ src: url(assets/Lato-Regular.ttf);
     .form__submit {
         width: 100%;
         margin-bottom: 32px;
+        height: 50px;
     }
 
     .copyright {

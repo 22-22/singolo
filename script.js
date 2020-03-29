@@ -18,16 +18,24 @@ MENU.addEventListener('click', (event) => {
 
 //burger
 BURGER.addEventListener('click', () => {
-	document.querySelector('.navigation').classList.add('active-nav-burger');
-	document.querySelector('.hamburger').classList.add('hamburger-active');
-	document.querySelector('.logo').classList.add('logo-burger');
-	document.querySelector('.navigation-overlay').classList.add('navigation-overlay-open');
-	document.querySelector('body').classList.add('lock');
+	if (BURGER.classList.contains('hamburger-active')) {
+		document.querySelector('.navigation').classList.remove('active-nav-burger');
+		BURGER.classList.remove('hamburger-active');
+		document.querySelector('.logo').classList.remove('logo-burger');
+		document.querySelector('.navigation-overlay').classList.remove('navigation-overlay-open');
+		document.querySelector('body').classList.remove('lock');
+	} else {
+		document.querySelector('.navigation').classList.add('active-nav-burger');
+		BURGER.classList.add('hamburger-active');
+		document.querySelector('.logo').classList.add('logo-burger');
+		document.querySelector('.navigation-overlay').classList.add('navigation-overlay-open');
+		document.querySelector('body').classList.add('lock');
+	}
 })
 
 MENU.addEventListener('click', (event) => {
 	document.querySelector('.navigation').classList.remove('active-nav-burger');
-	document.querySelector('.hamburger').classList.remove('hamburger-active');
+	BURGER.classList.remove('hamburger-active');
 	document.querySelector('.logo').classList.remove('logo-burger');
 	document.querySelector('.navigation-overlay').classList.remove('navigation-overlay-open');
 	document.querySelector('body').classList.remove('lock');
@@ -108,15 +116,15 @@ function changeCurrentItem(n) {
 function hideItem(direction) {
 	isEnabled = false;
 	items[currentItem].classList.add(direction);
-	items[currentItem].addEventListener('animationend', function() {
+	items[currentItem].addEventListener('animationend', function () {
 		this.classList.remove('active-slide', direction);
 	});
 }
 
 function showItem(direction) {
-	
+
 	items[currentItem].classList.add('next', direction);
-	items[currentItem].addEventListener('animationend', function() {
+	items[currentItem].addEventListener('animationend', function () {
 		this.classList.remove('next', direction);
 		this.classList.add('active-slide');
 		isEnabled = true;
@@ -136,24 +144,24 @@ function previousItem(n) {
 }
 
 function changeBack() {
-	if (items[currentItem].classList.contains('blue')) {	
+	if (items[currentItem].classList.contains('blue')) {
 		document.querySelector('.slider').setAttribute("style", "background: #648BF0; border-bottom: 6px solid #ffffff; transition: 1.5s;");
 	} else {
 		document.querySelector('.slider').setAttribute("style", "background: #f06c64; border-bottom: 6px solid #ea676b; transition: 1.5s;");
 	};
 }
 
-document.querySelector('.control.left').addEventListener('click', function() {
+document.querySelector('.control.left').addEventListener('click', function () {
 	if (isEnabled) {
 		previousItem(currentItem);
 		changeBack();
 	}
 });
 
-document.querySelector('.control.right').addEventListener('click', function() {
+document.querySelector('.control.right').addEventListener('click', function () {
 	if (isEnabled) {
 		nextItem(currentItem);
-		changeBack();	
+		changeBack();
 	}
 });
 
