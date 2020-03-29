@@ -1,11 +1,12 @@
 const HEADER = document.querySelector('#header');
-const MENU = document.querySelector('.navigation');
+const MENU = document.querySelector('.navigation__list');
 const PHONEVERT = document.querySelector('.slider__phone-vertical');
 const PHONEHOR = document.querySelector('.slider__phone-horizontal');
 const TAGS = document.querySelector('.tags');
 let PORTFOLIO = document.querySelector('.portfolio__layout-4-columns');
 const FORM = document.querySelector('.form');
-const MODAL = document.querySelector('.modal')
+const MODAL = document.querySelector('.modal');
+const BURGER = document.querySelector('.hamburger');
 
 //change active menu element
 MENU.addEventListener('click', (event) => {
@@ -15,9 +16,24 @@ MENU.addEventListener('click', (event) => {
 	}
 });
 
-//scroll with changing active menu element
-document.addEventListener('scroll', onScroll);
+//burger
+BURGER.addEventListener('click', () => {
+	document.querySelector('.navigation').classList.add('active-nav-burger');
+	document.querySelector('.hamburger').classList.add('hamburger-active');
+	document.querySelector('.logo').classList.add('logo-burger');
+	document.querySelector('.navigation-overlay').classList.add('navigation-overlay-open');
+	document.querySelector('body').classList.add('lock');
+})
 
+MENU.addEventListener('click', (event) => {
+	document.querySelector('.navigation').classList.remove('active-nav-burger');
+	document.querySelector('.hamburger').classList.remove('hamburger-active');
+	document.querySelector('.logo').classList.remove('logo-burger');
+	document.querySelector('.navigation-overlay').classList.remove('navigation-overlay-open');
+	document.querySelector('body').classList.remove('lock');
+});
+
+//scroll with changing active menu element
 function onScroll(event) {
 	const curPosition = window.scrollY + HEADER.offsetHeight;
 	const sections = document.querySelectorAll('body > section');
@@ -34,6 +50,8 @@ function onScroll(event) {
 		}
 	});
 }
+
+document.addEventListener('scroll', onScroll);
 
 //black screen
 PHONEVERT.addEventListener('click', () => {
